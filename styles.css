@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background: #ffc0cb;
+  background: #E7FEFF;
 }
 
 .header {
@@ -12,7 +12,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   padding: 250px;
-  background-color: #e7feff;
+  background-color: #FFC0CB;
   color: #000000;
   border-bottom: 4px solid #e7feff;
 }
