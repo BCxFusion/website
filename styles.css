@@ -1,34 +1,29 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 20px;
 }
 
 header {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    color: #333;
 }
 
 section {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
+    margin-bottom: 20px;
 }
 
-.lore, .abilities, .skins {
-    margin-bottom: 40px;
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.skin-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.skin-gallery img {
-    max-width: 200px;
-    margin: 10px;
+li {
+    margin-bottom: 5px;
 }
