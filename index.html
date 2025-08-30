@@ -7,53 +7,39 @@
     body {
       margin: 0;
       background-color: black;
+      font-family: Arial, sans-serif;
       height: 100vh;
       overflow: hidden;
-      font-family: Arial, sans-serif;
       position: relative;
     }
 
-    .text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 5rem;
-      opacity: 1;
-      animation: fadeOutText 4s ease-in-out forwards;
-      z-index: 2;
-    }
-
-    .venezuela {
+    .background-draven,
+    .background-venezuela {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('https://c.files.bbci.co.uk/6A32/production/_131568172_bbcm_venezuela_country_profile_map_301023.png');
       background-size: cover;
       background-position: center;
       opacity: 0;
-      animation: fadeInImage 4s ease-in-out 4s forwards;
-      z-index: 1;
+      z-index: 0;
     }
 
-    @keyframes fadeOutText {
-      to {
-        opacity: 0;
-      }
+    .background-draven {
+      background-image: url('YOUR_DRAVEN_IMAGE_URL_HERE');
+      animation: dravenFade 6s ease-in-out forwards;
     }
 
-    @keyframes fadeInImage {
-      to {
-        opacity: 1;
-      }
+    .background-venezuela {
+      background-image: url('https://c.files.bbci.co.uk/6A32/production/_131568172_bbcm_venezuela_country_profile_map_301023.png');
+      animation: venezuelaFade 4s ease-in-out 6s forwards;
     }
-  </style>
-</head>
-<body>
-  <div class="text">BCxFusion</div>
-  <div class="venezuela"></div>
-</body>
-</html>
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+     
