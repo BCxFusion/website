@@ -7,64 +7,53 @@
     body {
       margin: 0;
       background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
       height: 100vh;
       overflow: hidden;
+      font-family: Arial, sans-serif;
       position: relative;
     }
 
-    .background {
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 5rem;
+      opacity: 1;
+      animation: fadeOutText 4s ease-in-out forwards;
+      z-index: 2;
+    }
+
+    .venezuela {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('https://i1.sndcdn.com/artworks-Vj5zpjMzugO4LUzC-ioSo7g-t1080x1080.jpg');
+      background-image: url('https://c.files.bbci.co.uk/6A32/production/_131568172_bbcm_venezuela_country_profile_map_301023.png');
       background-size: cover;
       background-position: center;
       opacity: 0;
-      animation: fadeInOut 6s ease-in-out forwards;
-      z-index: 0;
-    }
-
-    .content {
-      position: relative;
+      animation: fadeInImage 4s ease-in-out 4s forwards;
       z-index: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
     }
 
-    h1 {
-      font-size: 5rem;
-      animation: textFadeZoom 2s ease-out forwards;
-    }
-
-    @keyframes fadeInOut {
-      0% { opacity: 0; }
-      30% { opacity: 1; }
-      70% { opacity: 1; }
-      100% { opacity: 0; }
-    }
-
-    @keyframes textFadeZoom {
-      from {
+    @keyframes fadeOutText {
+      to {
         opacity: 0;
-        transform: scale(0.8);
       }
+    }
+
+    @keyframes fadeInImage {
       to {
         opacity: 1;
-        transform: scale(1);
       }
     }
   </style>
 </head>
 <body>
-  <div class="background"></div>
-  <div class="content">
-    <h1>BCxFusion</h1>
-  </div>
+  <div class="text">BCxFusion</div>
+  <div class="venezuela"></div>
 </body>
 </html>
