@@ -27,7 +27,7 @@
     }
 
     .background-draven {
-      background-image: url('https://i1.sndcdn.com/artworks-Vj5zpjMzugO4LUzC-ioSo7g-t1080x1080.jpg');
+      background-image: url('YOUR_DRAVEN_IMAGE_URL_HERE');
       animation: dravenFade 6s ease-in-out forwards;
     }
 
@@ -42,5 +42,34 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
-     
+      font-size: 5rem;
+      opacity: 1;
+      z-index: 1;
+      animation: textFadeOut 6s ease-in-out forwards;
+    }
 
+    @keyframes dravenFade {
+      0% { opacity: 0; }
+      30% { opacity: 1; }
+      70% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes textFadeOut {
+      0% { opacity: 0; transform: scale(0.8); }
+      30% { opacity: 1; transform: scale(1); }
+      70% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes venezuelaFade {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-draven"></div>
+  <div class="background-venezuela"></div>
+  <div class="content">BCxFusion</div>
+</body>
+</html>
